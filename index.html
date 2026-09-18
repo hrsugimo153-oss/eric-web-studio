@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Eric Web Studio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Yu Gothic", sans-serif;
+      background: #0f1117;
+      color: #ffffff;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #171a23;
+      border-bottom: 1px solid #303645;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #dce3f0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #79a6ff;
+    }
+
+    .hero {
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #0f1117, #243451);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 48px;
+      letter-spacing: 3px;
+    }
+
+    .hero h2 {
+      margin: 18px 0 0;
+      font-size: 26px;
+      font-weight: normal;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #c3cede;
+      line-height: 1.9;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #4d83ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #326be8;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin: 0 0 35px;
+    }
+
+    .section-text {
+      text-align: center;
+      color: #c3cede;
+      line-height: 1.9;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 28px;
+      background: #191e29;
+      border: 1px solid #303645;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #79a6ff;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #c3cede;
+      line-height: 1.9;
+    }
+
+    .price {
+      color: #ffffff !important;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .note {
+      margin-top: 25px;
+      text-align: center;
+      color: #9daac0;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .contact-box {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 35px;
+      text-align: center;
+      background: #191e29;
+      border: 1px solid #303645;
+      border-radius: 12px;
+    }
+
+    .email {
+      display: block;
+      margin-top: 20px;
+      color: #79a6ff;
+      font-size: 17px;
+      word-break: break-word;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: #171a23;
+      color: #9daac0;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero h2 {
+        font-size: 21px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Eric Web Studio</div>
+
+    <nav>
+      <a href="#about">紹介</a>
+      <a href="#service">サービス</a>
+      <a href="#price">料金</a>
+      <a href="#contact">連絡先</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>Eric Web Studio</h1>
+
+      <h2>あなたのホームページを作ります</h2>
+
+      <p>
+        シンプルで見やすいホームページを制作します。<br>
+        個人サイト・プロフィールサイト・お店の紹介ページなどに対応します。
+      </p>
+
+      <a class="button" href="#contact">お問い合わせ</a>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+
+      <p class="section-text">
+        Eric Web Studioでは、見やすくて使いやすい<br>
+        ホームページを一つずつ制作します。
+      </p>
+    </section>
+
+    <section id="service">
+      <h2>サービス</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>ホームページ制作</h3>
+          <p>
+            シンプルで見やすいホームページを作ります。
+            スマートフォンにも対応したデザインにできます。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>デザイン変更</h3>
+          <p>
+            色・文字・背景・レイアウトなどを、
+            希望に合わせて変更します。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>ページの追加</h3>
+          <p>
+            自己紹介ページやサービスページなど、
+            必要なページを追加できます。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="price">
+      <h2>料金</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>お試しプラン</h3>
+          <p class="price">1,000円〜</p>
+          <p>
+            シンプルな1ページのホームページ。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>通常プラン</h3>
+          <p class="price">3,000円〜</p>
+          <p>
+            複数の項目があるホームページ。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>相談プラン</h3>
+          <p class="price">要相談</p>
+          <p>
+            ページ数や内容に合わせて料金を決めます。
+          </p>
+        </div>
+
+      </div>
+
+      <p class="note">
+        ※料金は制作内容によって変わります。<br>
+        ※公開用のサーバー代やドメイン代が必要になる場合があります。
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+
+      <div class="contact-box">
+        <p class="section-text">
+          ホームページ制作の相談はこちらからお願いします。
+        </p>
+
+        <a
+          class="button"
+          href="mailto:hr.sugimo153@gmail.com?subject=ホームページ制作の相談"
+        >
+          メールで相談する
+        </a>
+
+        <span class="email">
+          hr.sugimo153@gmail.com
+        </span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Eric Web Studio
+  </footer>
+
+</body>
+</html>
